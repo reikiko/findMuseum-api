@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\MuseumController;
 
 /*
@@ -36,6 +37,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //User details
     Route::get('/user', [UserController::class, 'index']);
     Route::get('/user/{id}', [UserController::class, 'show']);
+    Route::put('/user/{id}', [UserController::class, 'update']);
 });
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
