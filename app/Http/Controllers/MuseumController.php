@@ -10,6 +10,14 @@ class MuseumController extends Controller
 {
     public function index()
     {
+        // $museums = Museum::with('city')->get();
+        // return response()->json(
+        //     [
+        //         'status' => 'success',
+        //         'museums' => $museums,
+        //     ],
+        //     200
+        // );
         return Museum::all();
     }
 
@@ -23,6 +31,7 @@ class MuseumController extends Controller
     {
         $fields = $request->validate([
             'city_id' => 'required',
+            'city_name' => 'required',
             'name' => 'required',
             'slug' => 'required|unique:museums',
             'image' => 'required',
@@ -31,6 +40,7 @@ class MuseumController extends Controller
         ]);
         $museum = Museum::create([
             'city_id' => $fields['city_id'],
+            'city_name' => $fields['city_name'],
             'name' => $fields['name'],
             'slug' => $fields['slug'],
             'image' => $fields['image'],

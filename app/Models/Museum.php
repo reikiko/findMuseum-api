@@ -18,13 +18,13 @@ class Museum extends Model
         'excerpt',
     ];
 
-    public function city(){
-        return $this->belongsTo(City::class);        
+    public function city()
+    {
+        return $this->belongsTo(City::class);
     }
 
-    public function getRouteKeyName(){
+    public function getRouteKeyName()
+    {
         return 'slug';
     }
 }
-
-

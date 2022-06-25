@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('museums', function (Blueprint $table) {
             $table->id();
             $table->foreignId('city_id');
+            $table->string('city_name');
             $table->string('name');
             $table->string('slug');
             $table->string('image')->nullable();

@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
         //Seed Museums
         DB::table('museums')->insert([
             'city_id' => '1',
+            'city_name' => 'Bandung',
             'name' => 'Museum Pos Indonesia',
             'slug' => 'museum-posid',
             'image' => 'https://iili.io/ht4q0P.jpg',
@@ -46,6 +47,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('museums')->insert([
             'city_id' => '1',
+            'city_name' => 'Bandung',
             'name' => 'Museum Pendidikan',
             'slug' => 'museum-pendidikan',
             'image' => 'https://iili.io/ht63ps.jpg',
@@ -54,6 +56,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('museums')->insert([
             'city_id' => '2',
+            'city_name' => 'Jakarta',
             'name' => 'Museum Fatahillah',
             'slug' => 'museum-fatahillah',
             'image' => 'https://iili.io/htPYRn.jpg',
